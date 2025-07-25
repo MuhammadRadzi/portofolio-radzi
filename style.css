@@ -17,10 +17,8 @@ body {
 }
 
 header {
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
 }
 
 /* Navbar */
@@ -32,7 +30,6 @@ header {
   background: rgba(255, 255, 255, 0.15); /* transparansi */
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
-  border: 1px solid rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
@@ -53,13 +50,22 @@ header {
   list-style: none;
   display: flex;
   gap: 50px;
+  
 }
 
 .nav-links li a {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
+  padding: 10px;
+  border-radius: 8px;
+  backdrop-filter: blur(20px) saturate(150%);
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.349) ;
+  padding: 10px;
 }
 
 /* Hero Section */
@@ -147,6 +153,7 @@ header {
 }
 
 .work .work-gallery {
+  border-radius: 12px;
   display: flex;
   text-align: z;
   justify-content: center;
