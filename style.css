@@ -204,6 +204,56 @@ header {
   margin-bottom: 20px;
 }
 
+/* educational history section */
+.educational-history {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.educational-history h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.educational-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.educational-history li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+} 
+
+/* skills section */
+.skills {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.skills h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.skills img {
+  padding-right: 10px;
+  width: 100px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 /* contact section */
 .contact {
   text-align: center;
