@@ -237,22 +237,33 @@ header {
 }
 
 .skills ul {
-  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* jarak antar skill */
+  flex-wrap: wrap; /* biar responsif di layar kecil */
   padding: 0;
+  list-style: none;
 }
 
 .skills li {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.1rem;
   font-weight: bold;
+  margin: 10px;
 }
 
 .skills img {
-  padding-right: 10px;
-  width: 100px;
-  margin-right: 10px;
-  vertical-align: middle;
+  width: 80px; /* ukuran icon */
+  margin-bottom: 8px;
 }
+
+.skills p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
 
 /* contact section */
 .contact {
