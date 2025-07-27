@@ -1,3 +1,4 @@
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +28,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background: rgba(255, 255, 255, 0.15); /* transparansi */
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
   position: relative;
@@ -41,7 +42,7 @@ header {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: white;
 }
@@ -50,7 +51,6 @@ header {
   list-style: none;
   display: flex;
   gap: 50px;
-  
 }
 
 .nav-links li a {
@@ -64,7 +64,7 @@ header {
 }
 
 .nav-links li a:hover {
-  background-color: rgba(255, 255, 255, 0.349) ;
+  background-color: rgba(255, 255, 255, 0.349);
   padding: 10px;
 }
 
@@ -94,7 +94,7 @@ header {
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   letter-spacing: 2px;
 }
 
@@ -110,7 +110,7 @@ header {
 }
 
 .content p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-bottom: 20px;
 }
 
@@ -129,7 +129,6 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Efek hover */
 .btn:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.2);
@@ -148,7 +147,7 @@ header {
 }
 
 .work p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-bottom: 20px;
 }
 
@@ -161,7 +160,7 @@ header {
   margin: auto;
   width: 1800px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.15); /* transparansi */
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -182,10 +181,9 @@ header {
 }
 
 .work .work-gallery p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-top: 5px;
 }
-
 
 /* about section */
 .about {
@@ -200,7 +198,7 @@ header {
 }
 
 .about p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-bottom: 20px;
 }
 
@@ -221,9 +219,9 @@ header {
 }
 
 .educational-history li {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-bottom: 10px;
-} 
+}
 
 /* skills section */
 .skills {
@@ -237,33 +235,28 @@ header {
 }
 
 .skills ul {
+  list-style: none;
+  padding: 0;
   display: flex;
   justify-content: center;
-  gap: 40px; /* jarak antar skill */
-  flex-wrap: wrap; /* biar responsif di layar kecil */
-  padding: 0;
-  list-style: none;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .skills li {
+  font-size: 1.3rem;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.1rem;
-  font-weight: bold;
   margin: 10px;
 }
 
 .skills img {
-  width: 80px; /* ukuran icon */
+  width: 60px;
   margin-bottom: 8px;
+  vertical-align: middle;
 }
-
-.skills p {
-  text-align: center;
-  font-size: 1.1rem;
-}
-
 
 /* contact section */
 .contact {
@@ -277,7 +270,7 @@ header {
 }
 
 .contact p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-bottom: 20px;
 }
 
@@ -295,7 +288,7 @@ header {
   margin-bottom: 20px;
   border: none;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.15); /* transparansi */
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
   border: 0px solid rgba(0, 0, 0, 0.3);
@@ -314,7 +307,7 @@ header {
   padding: 12px 30px;
   font-size: 16px;
   font-weight: bold;
-  background: rgba(255, 255, 255, 0.15); /* transparansi */
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px) saturate(180%);
   -webkit-backdrop-filter: blur(15px) saturate(180%);
   border: 0px solid rgba(0, 0, 0, 0.3);
@@ -328,19 +321,17 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Efek hover */
 .contact form button:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
 }
 
-
 /* Footer */
 footer {
   text-align: center;
   padding: 50px;
-  background: rgba(255, 255, 255, 0.15); /* transparansi */
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -352,4 +343,5 @@ footer {
 
 footer p {
   color: white;
+  /* font-size: 1.3rem; */
 }
