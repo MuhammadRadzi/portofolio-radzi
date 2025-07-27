@@ -42,7 +42,7 @@ header {
 }
 
 .logo {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: bold;
   color: white;
 }
@@ -256,6 +256,10 @@ header {
   width: 60px;
   margin-bottom: 8px;
   vertical-align: middle;
+}
+
+.skills p {
+  font-size: 1.3rem;
 }
 
 /* contact section */
