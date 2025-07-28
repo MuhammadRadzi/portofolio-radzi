@@ -373,19 +373,23 @@ footer p {
 .media-socials {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  margin-bottom: 50px;
+  align-items: center;
+  flex-wrap: wrap; /* biar bisa ganti baris jika sempit */
+  gap: 20px;
+  margin: 30px 20px; /* tambahkan sedikit padding kiri-kanan */
 }
+
 
 .media-socials a {
-  display: inline-block;
+  flex: 0 0 auto; /* jaga ukuran */
 }
 
+
 .media-socials img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   transition: transform 0.3s;
-  border-radius: 100%;
+  border-radius: 50%;
   filter: brightness(100%);
 }
 
@@ -416,5 +420,18 @@ footer p {
   .work .work-item {
     flex: 0 0 auto;
     scroll-snap-align: start;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .media-socials {
+    align-items: center;
+    gap: 20px;
+  }
+
+  .media-socials img {
+    width: 45px;
+    height: 45px;
   }
 }
