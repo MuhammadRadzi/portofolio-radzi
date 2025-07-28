@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Radzi - Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <nav class="navbar">
@@ -17,14 +19,16 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-
+    
     <div class="hero">
-      <img src="image/WIN_20241114_13_42_43_Pro.jpg" alt="Muhammad Radzi Saleh" class="profile-img">
-      <h1>Hello, I'm <span>Radzi</span></h1>
+      <img src="image/WIN_20241114_13_42_43_Pro.jpg" alt="Muhammad Radzi Saleh" class="profile-img" data-aos="zoom-in">
+    <div class="hero-text" data-aos="fade-up">
+      <h1 >Hello, I'm <span>Radzi</span></h1>
       <p>I'M WEB DEVELOPER</p>
     </div>
+    </div>
 
-    <div class="content">
+    <div class="content" data-aos="fade-up">
         <h2>Welcome to My Portfolio</h2>
         <p>Explore my work and discover how I can help you create stunning user experiences.</p>
         <a href="#work"><button class="btn">View My Work</button></a>
@@ -32,8 +36,8 @@
   </header>
 
   <section class="work" id="work">
-    <h2>My Work</h2>
-    <div class="work-gallery">
+    <h2 data-aos="fade-up">My Work</h2>
+    <div class="work-gallery" data-aos="flip-up">
       <div class="work-item">
         <img src="image/ilmu-qayyim.png" alt="Project 1">
         <h3>Ilmu Qayyim</h3>
@@ -52,14 +56,14 @@
     </div>
   </section>
 
-  <section class="about" id="about">
+  <section class="about" id="about" data-aos="fade-right">
     <h2>About Me</h2>
     <p>I'm a passionate web developer with a focus on creating beautiful and functional websites. My goal is to bring your ideas to life with modern web technologies.</p>  
     <p>With a background in both design and development, I strive to create user-friendly interfaces that not only look great but also perform well.</p>
     <p>Let's work together to build something amazing!</p>
   </section>
 
-  <section class="educational-history">
+  <section class="educational-history" data-aos="fade-left">
     <h2>Educational History</h2>
     <ul>
       <li>2021 - 2024: MTs Abu Hurairah</li>
@@ -67,7 +71,7 @@
     </ul>
   </section>
 
-  <section class="skills">
+  <section class="skills" data-aos="zoom-out"> 
     <h2>Skills</h2>
     <ul>
       <li><img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="HTML">HTML</li>
@@ -81,9 +85,9 @@
   </section>
   
   <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <p>If you're interested in working together or have any questions, feel free to reach out!</p>
-    <form action="#" method="post">
+    <h2 data-aos="fade-up">Contact Me</h2>
+    <p data-aos="fade-up">If you're interested in working together or have any questions, feel free to reach out!</p>
+    <form action="#" method="post" data-aos="flip-up">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" required></textarea>
@@ -101,6 +105,14 @@
     </div>
     
     <p>&copy; 2025 Radzi. All rights reserved.</p>
-  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+  </script>
+
 </body>
 </html>
