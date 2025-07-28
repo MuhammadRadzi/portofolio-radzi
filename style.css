@@ -350,3 +350,26 @@ footer p {
   color: white;
   /* font-size: 1.3rem; */
 }
+
+.media-socials {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 50px;
+}
+
+.media-socials a {
+  display: inline-block;
+}
+
+.media-socials img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s;
+  border-radius: 100%;
+  filter: brightness(100%);
+}
+
+.media-socials img:hover {
+  transform: scale(1.1);
+}
