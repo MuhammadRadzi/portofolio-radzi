@@ -15,6 +15,11 @@ body {
   background-image: url(image/6229893.jpg);
   background-position: center center;
   background-size: cover;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 header {
