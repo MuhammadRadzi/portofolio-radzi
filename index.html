@@ -37,7 +37,7 @@
 
   <section class="work" id="work">
     <h2 data-aos="fade-up" >My Work</h2>
-    <div class="work-gallery" data-aos="flip-up" data-aos-delay="300">
+    <div class="work-gallery" data-aos="flip-up">
       <div class="work-item">
         <img src="image/ilmu-qayyim.png" alt="Project 1">
         <h3>Ilmu Qayyim</h3>
@@ -109,8 +109,10 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
   AOS.init({
-    duration: 1000,
-    once: true, // Animation only happens once
+    duration: 700,
+    offset: 100, // Offset (in px) from the original trigger point
+    once: false, // Animation only happens once
+    easing:"ease-out-back"
   });
   </script>
 
