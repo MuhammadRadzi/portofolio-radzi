@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['user'])) {
+    header("Location: welcome.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +17,7 @@
 </head>
 <body>
     <div class="login-container" data-aos="flip-down">
-        <form class="login-box" action="#" method="post">
+        <form class="login-box" action="auth.php" method="POST">
             <h2>Login</h2>
             <input type="text" placeholder="Username" required />
             <input type="password" placeholder="Password" required />
