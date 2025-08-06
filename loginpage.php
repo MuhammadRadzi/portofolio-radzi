@@ -19,10 +19,10 @@ if(!isset($_SESSION['user'])) {
     <div class="login-container" data-aos="flip-down">
         <form class="login-box" action="auth.php" method="POST">
             <h2>Login</h2>
-            <input type="text" placeholder="Username" required />
-            <input type="password" placeholder="Password" required />
+            <input type="text" name="username" placeholder="Username" required />
+            <input type="password" name="password" placeholder="Password" required />
             <a id="text" >Forgot password?</a>
-            <input type="submit" value="Login" />
+            <input type="submit" value="Login"/>
             <br><br><br>
             <div class="back-button">
                 <a href="index.html">← Back to Home</a>
