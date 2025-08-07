@@ -93,3 +93,9 @@
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
 }
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}

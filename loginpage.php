@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['user'])) {
+if(isset($_SESSION['user'])) {
     header("Location: welcome.php");
     exit;
 }
@@ -17,12 +17,17 @@ if(!isset($_SESSION['user'])) {
 </head>
 <body>
     <div class="login-container" data-aos="flip-down">
+        
+        
         <form class="login-box" action="auth.php" method="POST">
             <h2>Login</h2>
             <input type="text" name="username" placeholder="Username" required />
             <input type="password" name="password" placeholder="Password" required />
-            <a id="text" >Forgot password?</a>
+            <a id="text" href="#">Forgot password?</a>
             <input type="submit" value="Login"/>
+            <?php if (isset($_GET['error'])): ?>
+                <p class="error">Username atau password salah!</p>
+            <?php endif; ?>
             <br><br><br>
             <div class="back-button">
                 <a href="index.html">← Back to Home</a>
