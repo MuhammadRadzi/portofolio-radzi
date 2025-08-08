@@ -20,6 +20,6 @@ if (isset($dummy_users[$username]) && $dummy_users[$username] === $password) {
 	header("Location: welcome.php");
 } else {
 	// Redirect to login page with error
-	header("Location: loginpage.php?error=1");
+	header("Location: login.php?error=1");
 	exit;
 };
