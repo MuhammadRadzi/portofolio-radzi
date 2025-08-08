@@ -16,46 +16,66 @@ $page = $_GET['page'] ?? 'home';
     <title>welcome</title>
     <style>
 		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-			background-color: #f4f4f4;
-		}
-        nav {
-            background: #3a3a3aff;
-            padding: 10px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
         }
-        nav a {
+        .sidebar {
+            width: 220px;
+            background-color: #2c3e50;
             color: white;
-            margin: 0 10px;
+            padding-top: 20px;
+            flex-shrink: 0;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px 20px;
             text-decoration: none;
         }
-
-		h2 {
-			text-align: center;
-			color: #333;
-			margin-top: 20px;
-		}
-		
-		.content {
-			margin: auto 60px ;
+        .sidebar a:hover {
+            background-color: #34495e;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #ecf0f1;
+            overflow-y: auto;
+        }
+        .logout-btn {
+            background-color: #c0392b;
+            color: white;
+            padding: 10px 20px;
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .logout-btn:hover {
+            background-color: #e74c3c;
 		}
     </style>
 </head>
 <body>
-    <nav>
-        <a href="welcome.php?page=home">Home</a>
-        <a href="welcome.php?page=nilai">Nilai</a>
-        <a href="welcome.php?page=kehadiran">Kehadiran</a>
-        <a href="welcome.php?page=jadal">Jadwal</a>
-        <a href="welcome.php?page=pengaturan">Pengaturan</a>
-        <a href="welcome.php?page=laporan">Laporan</a>
-        <a href="logout.php">Logout</a>
-    </nav>
-
-    <h2>Selamat datang, <?php echo htmlspecialchars($username); ?>!</h2>
-
-    <div class="content">
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="welcome.php?page=home">🏠 Home</a>
+        <a href="welcome.php?page=nilai">📊 Nilai</a>
+        <a href="welcome.php?page=kehadiran">📝 Kehadiran</a>
+        <a href="welcome.php?page=jadwal">📅 Jadwal</a>
+        <a href="welcome.php?page=pengaturan">⚙️ Pengaturan</a>
+        <a href="welcome.php?page=laporan">📄 Laporan</a>
+        <a href="logout.php" class="logout-btn">🚪 Logout</a>
+		</div>
+		
+		
+	<div class="content">
+		<h2>Selamat datang, <?php echo htmlspecialchars($username); ?>!</h2>
         <?php
         switch ($page) {
             case 'home':
@@ -67,7 +87,7 @@ $page = $_GET['page'] ?? 'home';
             case 'kehadiran':
                 echo "<h3>Halaman kehadiran menyajikan catatan lengkap mengenai absensi selama periode tertentu. Informasi yang ditampilkan mencakup jumlah kehadiran, izin, sakit, dan alfa (tidak hadir tanpa keterangan). Rekap kehadiran biasanya dilengkapi dengan persentase, sehingga memudahkan untuk mengevaluasi kedisiplinan. Fitur tambahan yang umum ditemui adalah filter berdasarkan bulan atau semester, serta grafik visual untuk memberikan gambaran yang lebih jelas mengenai pola kehadiran. Halaman ini bermanfaat untuk memastikan catatan absensi tetap terpantau dengan baik.</h3>";
                 break;
-            case 'jadal': // typo dari 'jadwal' biar sesuai link
+            case 'jadwal': // typo dari 'jadwal' biar sesuai link
                 echo "<h3>Halaman ini berfungsi sebagai panduan kegiatan harian. Di dalamnya terdapat daftar lengkap mata pelajaran, jam pelajaran, nama pengajar, dan ruangan tempat kegiatan berlangsung. Jadwal biasanya tersusun rapi berdasarkan urutan hari dan jam, sehingga pengguna dapat dengan mudah mengetahui kegiatan yang akan diikuti. Pada beberapa sistem, halaman ini juga dilengkapi dengan fitur pengingat otomatis atau notifikasi jika jadwal mengalami perubahan mendadak. Dengan adanya halaman jadwal, risiko terlambat atau salah masuk kelas dapat diminimalkan.</h3>";
                 break;
             case 'pengaturan':
