@@ -6,5 +6,5 @@
 <h1 style="text-align: center;">Halaman Login</h1>
 <img src="image/2.png" alt="" width="100%">
 
-<h1 style="text-align: center;">Halaman Welcome</h1>
+<h1 style="text-align: center;">Halaman Welcome/Dashboard</h1>
 <img src="image/3.png" alt="" width="100%">
