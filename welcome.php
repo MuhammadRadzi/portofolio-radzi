@@ -2,7 +2,7 @@
 session_start();
 // Check if the user is already logged in	
 if (!isset($_SESSION['user'])) {
-	header("Location: loginpage.php");
+	header("Location: login.php");
 	exit;
 }
 ?>
@@ -12,7 +12,6 @@ if (!isset($_SESSION['user'])) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="refresh" content="5;url=index.html">
 	<title>Berhasil Login</title>
 	<style>
 		/* teksnya di tengah page, h1-nya diatas, p-nya dibawah */
@@ -36,25 +35,36 @@ if (!isset($_SESSION['user'])) {
 			color: #555;
 			font-size: 18px;
 		}
-
+		
+		.back-button {
+			margin-top: 20px;
+		}
+		.back-button a {
+			text-decoration: none;
+			color: #007bff;
+			font-weight: bold;
+		}
+		.logout {
+			margin-top: 20px;
+			text-decoration: none;
+			color: #ff0000;
+			font-weight: bold;
+		}
+		.logout:hover {
+			text-decoration: underline;
+		}
+		
 	</style>
 </head>
 <body>
 	<h1>Selamat Datang, <?php echo $_SESSION['user']; ?>!</h1>
 	<p>Anda telah berhasil masuk ke sistem.</p>
-
-	<p>Redirecting in <span id="countdown">5</span> seconds...</p>
-<script>
-  let seconds = 5;
-  const countdownEl = document.getElementById("countdown");
-  setInterval(() => {
-    seconds--;
-    countdownEl.textContent = seconds;
-    if (seconds <= 0) {
-      window.location.href = "index.html";
-    }
-  }, 1000);
-</script>
+	<p>Silakan lanjutkan ke halaman lain.</p>
+	<!-- Link ke halaman lain, misalnya logout -->
+	<div class="back-button">
+		<a href="index.html">Back to Home</a>
+	</div>
+	<a class="logout" href="logout.php">Logout</a>
 </body>
 
 </html>
