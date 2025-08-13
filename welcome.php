@@ -58,7 +58,7 @@ $page = $_GET['page'] ?? 'home';
         }
         .logout-btn:hover {
             background-color: #e74c3c;
-		}
+		}   
     </style>
 </head>
 <body>
@@ -87,14 +87,14 @@ $page = $_GET['page'] ?? 'home';
             case 'kehadiran':
                 echo "<h3>Halaman kehadiran menyajikan catatan lengkap mengenai absensi selama periode tertentu. Informasi yang ditampilkan mencakup jumlah kehadiran, izin, sakit, dan alfa (tidak hadir tanpa keterangan). Rekap kehadiran biasanya dilengkapi dengan persentase, sehingga memudahkan untuk mengevaluasi kedisiplinan. Fitur tambahan yang umum ditemui adalah filter berdasarkan bulan atau semester, serta grafik visual untuk memberikan gambaran yang lebih jelas mengenai pola kehadiran. Halaman ini bermanfaat untuk memastikan catatan absensi tetap terpantau dengan baik.</h3>";
                 break;
-            case 'jadwal': // typo dari 'jadwal' biar sesuai link
+            case 'jadwal':
                 echo "<h3>Halaman ini berfungsi sebagai panduan kegiatan harian. Di dalamnya terdapat daftar lengkap mata pelajaran, jam pelajaran, nama pengajar, dan ruangan tempat kegiatan berlangsung. Jadwal biasanya tersusun rapi berdasarkan urutan hari dan jam, sehingga pengguna dapat dengan mudah mengetahui kegiatan yang akan diikuti. Pada beberapa sistem, halaman ini juga dilengkapi dengan fitur pengingat otomatis atau notifikasi jika jadwal mengalami perubahan mendadak. Dengan adanya halaman jadwal, risiko terlambat atau salah masuk kelas dapat diminimalkan.</h3>";
                 break;
             case 'pengaturan':
                 echo "<h3>Halaman pengaturan adalah pusat kontrol untuk memodifikasi berbagai preferensi akun. Pengguna dapat mengubah data profil seperti nama, alamat email, dan foto profil, mengganti kata sandi, mengatur keamanan akun, serta menyesuaikan tampilan dashboard sesuai keinginan. Beberapa sistem juga menyediakan opsi untuk mengaktifkan atau menonaktifkan notifikasi, mengubah bahasa, dan memilih tema warna. Halaman ini memungkinkan pengguna memiliki kendali penuh atas pengalaman penggunaan dashboard mereka.</h3>";
                 break;
             case 'laporan':
-                echo "<h3>Halaman laporan menyediakan akses ke dokumen atau data yang telah dirangkum secara lengkap. Di sini pengguna dapat melihat laporan nilai per semester, laporan kehadiran, hingga laporan kegiatan ekstrakurikuler. Laporan biasanya disajikan dalam bentuk tabel atau grafik, dengan opsi untuk mengunduhnya dalam format PDF atau mencetaknya langsung. Halaman ini sangat berguna bagi siswa, orang tua, atau pihak sekolah untuk melakukan evaluasi dan perencanaan berdasarkan data yang telah terdokumentasi dengan baik.</h3>";
+                include 'laporan.php';
                 break;
             default:
                 echo "<h3>Halaman tidak ditemukan</h3>";
