@@ -1,0 +1,162 @@
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	display: flex;
+	height: 100vh;
+}
+
+.sidebar {
+	width: 220px;
+	background-color: #2c3e50;
+	color: white;
+	padding-top: 20px;
+	flex-shrink: 0;
+}
+
+.sidebar h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.sidebar a {
+	display: block;
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+.sidebar a:hover {
+	background-color: #34495e;
+}
+
+.content {
+	flex-grow: 1;
+	padding: 20px;
+	background-color: #ecf0f1;
+	overflow-y: auto;
+}
+
+.logout-btn {
+	background-color: #c0392b;
+	color: white;
+	padding: 10px 20px;
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.logout-btn:hover {
+	background-color: #e74c3c;
+}
+
+
+/* Laporan */
+
+.form-container {
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+h1 {
+	margin-bottom: 10px;
+}
+
+.top-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	background: #2d8f4f;
+	color: white;
+	text-decoration: none;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.btn.secondary {
+	background: #3498db;
+}
+
+.btn.danger {
+	background: #c0392b;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background: white;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	border: #000;
+	text-align: center;
+}
+
+th,
+td {
+	padding: 10px 12px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+th {
+	background: #fafafa;
+	font-weight: 600;
+}
+
+tr:last-child td {
+	border-bottom: 1px solid #000;
+}
+
+.thumb {
+	width: 90px;
+	height: 90px;
+	object-fit: cover;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+}
+
+.aksi-btns a {
+	margin-right: 6px;
+	font-size: 15px;
+	padding: 6px 8px;
+	border-radius: 4px;
+	text-decoration: none;
+	color: white;
+}
+
+.aksi-btns .view {
+	background: #27ae60;
+}
+
+.aksi-btns .edit {
+	background: #f39c12;
+}
+
+.aksi-btns .delete {
+	background: #e74c3c;
+}
+
+.note {
+	color: #666;
+	font-size: 13px;
+	margin-top: 8px;
+}
+
+@media (max-width:800px) {
+	.top-bar {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+	}
+
+	th,
+	td {
+		font-size: 14px;
+		padding: 8px;
+	}
+}

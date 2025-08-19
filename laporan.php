@@ -6,15 +6,15 @@ if (isset($_SESSION['username'])) {
     exit;
 }
 
-// $students = [
-//     [
-//         'nama' => 'Muhammad Radzi Saleh',
-//         'nis' => '101234',
-//         'email' => 'nippon.pein14@gmail.com',
-//         'jurusan' => 'Rekayasa Perangkat Lunak',
-//         'gambar' => 'image/WIN_20241114_13_42_43_Pro.jpg'
-//     ]
-// ];
+$students = [
+    [
+        'nama' => 'Muhammad Radzi Saleh',
+        'nis' => '101234',
+        'email' => 'nippon.pein14@gmail.com',
+        'jurusan' => 'Rekayasa Perangkat Lunak',
+        'gambar' => 'image/WIN_20241114_13_42_43_Pro.jpg'
+    ]
+];
 
 ?>
 <!DOCTYPE html>
@@ -126,7 +126,7 @@ if (isset($_SESSION['username'])) {
                 <tr>
                     <td><?= $no++; ?></td>
                     <td>
-                        <img src="<?= htmlspecialchars($s['gambar']); ?>" alt="gambar-<?= $no ?>" class="thumb">
+                        <img src="<?= htmlspecialchars($s['gambar']); ?>" style="width: 70%;" class="thumb">
                     </td>
                     <td><?= htmlspecialchars($s['nama']); ?></td>
                     <td><?= htmlspecialchars($s['nis']); ?></td>

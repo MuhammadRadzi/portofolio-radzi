@@ -9,58 +9,24 @@ if (!isset($_SESSION['user'])) {
 
 $username = $_SESSION['user'];
 $page = $_GET['page'] ?? 'home';
+
+
 ?>
+
+<?php
+require 'functions.php';
+$siswa = mysqli_query($conn, "SELECT * FROM siswa");
+
+?>
+
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>welcome</title>
-    <style>
-		body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            height: 100vh;
-        }
-        .sidebar {
-            width: 220px;
-            background-color: #2c3e50;
-            color: white;
-            padding-top: 20px;
-            flex-shrink: 0;
-        }
-        .sidebar h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .sidebar a {
-            display: block;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-        }
-        .sidebar a:hover {
-            background-color: #34495e;
-        }
-        .content {
-            flex-grow: 1;
-            padding: 20px;
-            background-color: #ecf0f1;
-            overflow-y: auto;
-        }
-        .logout-btn {
-            background-color: #c0392b;
-            color: white;
-            padding: 10px 20px;
-            display: block;
-            margin-top: 20px;
-            text-align: center;
-            text-decoration: none;
-        }
-        .logout-btn:hover {
-            background-color: #e74c3c;
-		}   
-    </style>
+    <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
     <div class="sidebar">
         <h2>Menu</h2>
@@ -71,11 +37,11 @@ $page = $_GET['page'] ?? 'home';
         <a href="welcome.php?page=pengaturan">⚙️ Pengaturan</a>
         <a href="welcome.php?page=laporan">📄 Laporan</a>
         <a href="logout.php" class="logout-btn">🚪 Logout</a>
-		</div>
-		
-		
-	<div class="content">
-		<h2>Selamat datang, <?php echo htmlspecialchars($username); ?>!</h2>
+    </div>
+
+
+    <div class="content">
+        <h2>Selamat datang, <?php echo htmlspecialchars($username); ?>!</h2>
         <?php
         switch ($page) {
             case 'home':
@@ -94,7 +60,77 @@ $page = $_GET['page'] ?? 'home';
                 echo "<h3>Halaman pengaturan adalah pusat kontrol untuk memodifikasi berbagai preferensi akun. Pengguna dapat mengubah data profil seperti nama, alamat email, dan foto profil, mengganti kata sandi, mengatur keamanan akun, serta menyesuaikan tampilan dashboard sesuai keinginan. Beberapa sistem juga menyediakan opsi untuk mengaktifkan atau menonaktifkan notifikasi, mengubah bahasa, dan memilih tema warna. Halaman ini memungkinkan pengguna memiliki kendali penuh atas pengalaman penggunaan dashboard mereka.</h3>";
                 break;
             case 'laporan':
-                include 'laporan.php';
+        ?>
+                <h3>Laporan Siswa</h3>
+                <div class="form-container">
+                    <h4>Tambah Siswa Baru</h4>
+                    <form action="tambah.php" method="POST" enctype="multipart/form-data">
+                        <label for="nama">Nama:</label>
+                        <input type="text" id="nama" name="nama" required>
+
+                        <label for="nis">NIS:</label>
+                        <input type="text" id="nis" name="nis" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="jurusan">Jurusan:</label>
+                        <select name="jurusan" id="jurusan">
+                            <option value=""></option>
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                            <option value="Sistem Informatika">Sistem Informatika</option>
+                        </select>
+
+                        <label for="gambar">Gambar Profil:</label>
+                        <input type="file" name="gambar" id="gambar" accept="image/*">
+
+                        <button type="submit">Tambah Siswa</button>
+                    </form>
+                </div>
+
+                <h4>Daftar Siswa</h4>
+                <table border="1" cellpadding="10" cellspacing="0">
+                    <thead>
+
+                        <tr>
+                            <th>No.</th>
+                            <th>Nama</th>
+                            <th>NIS</th>
+                            <th>Email</th>
+                            <th>Jurusan</th>
+                            <th>Gambar</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (empty($siswa)): ?>
+                        <tr>
+                            <td colspan="7" style="text-align:center; padding:30px;">Data kosong.</td>
+                        </tr>
+                        <?php else: ?>
+                        <?php
+                        $i = 1;
+                        $siswa = isset($siswa) ? $siswa : [];
+                        foreach ($siswa as $row) : ?>
+                            <tr>
+                                <td><?= $i; ?></td>
+                                <td><?= htmlspecialchars($row['nama']); ?></td>
+                                <td><?= htmlspecialchars($row['nis']); ?></td>
+                                <td><?= htmlspecialchars($row['email']); ?></td>
+                                <td><?= htmlspecialchars($row['jurusan']); ?></td>
+                                <td><img src="image/<?= htmlspecialchars($row['gambar']);?>" class="thumb"></td>
+                                <td class="aksi-btns">
+                                    <a href="view.php?id=<?= $s['id']; ?>" class="view">Lihat</a>
+                                    <a href="edit.php?id=<?= $s['id']; ?>" class="edit">Ubah</a>
+                                    <a href="delete.php?id=<?= $s['id']; ?>" class="delete" onclick="return confirm('Hapus data <?= addslashes($s['nama']) ?>?')">Hapus</a>
+                                </td>
+                            </tr>
+                            <?php $i++; ?>
+                        <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+        <?php
                 break;
             default:
                 echo "<h3>Halaman tidak ditemukan</h3>";
@@ -103,4 +139,5 @@ $page = $_GET['page'] ?? 'home';
         ?>
     </div>
 </body>
+
 </html>
