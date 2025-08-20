@@ -11,7 +11,7 @@ function query($query)
 
     // yg akan di ambil setiap data
     while ($row = mysqli_fetch_assoc($result)) {
-        echo '<img src="iamge/' . $row['gambar'] . '" width="100">';
+        echo '<img src="image/' . $row['gambar'] . '" width="100">';
         // menambahkan elemen baru setiap array
         $rows[] = $row;
     }
