@@ -17,6 +17,20 @@ $page = $_GET['page'] ?? 'home';
 require 'functions.php';
 $siswa = mysqli_query($conn, "SELECT * FROM siswa");
 
+
+if (isset($_POST["submit"])) {
+    if (tambah($_POST) > 0) {
+        echo "<script>
+            alert('Data berhasil ditambahkan!');
+            document.location.href = 'welcome.php';
+        </script>";
+    } else {
+        echo "<script>
+            alert('Data gagal ditambahkan!');
+            document.location.href = 'welcome.php';
+        </script>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +78,7 @@ $siswa = mysqli_query($conn, "SELECT * FROM siswa");
                 <h3>Laporan Siswa</h3>
                 <div class="form-container">
                     <h4>Tambah Siswa Baru</h4>
-                    <form action="tambah.php" method="POST" enctype="multipart/form-data">
+                    <form action="" method="POST" enctype="multipart/form-data">
                         <label for="nama">Nama:</label>
                         <input type="text" id="nama" name="nama" required>
 
@@ -84,7 +98,7 @@ $siswa = mysqli_query($conn, "SELECT * FROM siswa");
                         <label for="gambar">Gambar Profil:</label>
                         <input type="file" name="gambar" id="gambar" accept="image/*">
 
-                        <button type="submit">Tambah Siswa</button>
+                        <button type="submit" name="submit">Tambah Siswa</button>
                     </form>
                 </div>
 
@@ -104,29 +118,29 @@ $siswa = mysqli_query($conn, "SELECT * FROM siswa");
                     </thead>
                     <tbody>
                         <?php if (empty($siswa)): ?>
-                        <tr>
-                            <td colspan="7" style="text-align:center; padding:30px;">Data kosong.</td>
-                        </tr>
-                        <?php else: ?>
-                        <?php
-                        $i = 1;
-                        $siswa = isset($siswa) ? $siswa : [];
-                        foreach ($siswa as $row) : ?>
                             <tr>
-                                <td><?= $i; ?></td>
-                                <td><?= htmlspecialchars($row['nama']); ?></td>
-                                <td><?= htmlspecialchars($row['nis']); ?></td>
-                                <td><?= htmlspecialchars($row['email']); ?></td>
-                                <td><?= htmlspecialchars($row['jurusan']); ?></td>
-                                <td><img src="image/<?= htmlspecialchars($row['gambar']);?>" class="thumb"></td>
-                                <td class="aksi-btns">
-                                    <a href="view.php?id=<?= $s['id']; ?>" class="view">Lihat</a>
-                                    <a href="edit.php?id=<?= $s['id']; ?>" class="edit">Ubah</a>
-                                    <a href="delete.php?id=<?= $s['id']; ?>" class="delete" onclick="return confirm('Hapus data <?= addslashes($s['nama']) ?>?')">Hapus</a>
-                                </td>
+                                <td colspan="7" style="text-align:center; padding:30px;">Data kosong.</td>
                             </tr>
-                            <?php $i++; ?>
-                        <?php endforeach; ?>
+                        <?php else: ?>
+                            <?php
+                            $i = 1;
+                            $siswa = isset($siswa) ? $siswa : [];
+                            foreach ($siswa as $row) : ?>
+                                <tr>
+                                    <td><?= $i; ?></td>
+                                    <td><?= htmlspecialchars($row['nama']); ?></td>
+                                    <td><?= htmlspecialchars($row['nis']); ?></td>
+                                    <td><?= htmlspecialchars($row['email']); ?></td>
+                                    <td><?= htmlspecialchars($row['jurusan']); ?></td>
+                                    <td><img src="image/<?= htmlspecialchars($row['gambar']); ?>" class="thumb"></td>
+                                    <td class="aksi-btns">
+                                        <a href="view.php?id=<?= $s['id']; ?>" class="view">Lihat</a>
+                                        <a href="edit.php?id=<?= $s['id']; ?>" class="edit">Ubah</a>
+                                        <a href="delete.php?id=<?= $s['id']; ?>" class="delete" onclick="return confirm('Hapus data <?= addslashes($s['nama']) ?>?')">Hapus</a>
+                                    </td>
+                                </tr>
+                                <?php $i++; ?>
+                            <?php endforeach; ?>
                         <?php endif; ?>
                     </tbody>
                 </table>
