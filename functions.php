@@ -30,6 +30,20 @@ function tambah($data)
     $jurusan = htmlspecialchars($data['jurusan']);
     $gambar = htmlspecialchars($data['gambar']);
 
+    if ($_FILES['gambar']['error'] === 4) {
+        // 4 = UPLOAD_ERR_NO_FILE → tidak ada file diupload
+        $gambar = "default.jpg";
+    } else {
+        // upload gambar
+        $gambar = $_FILES['gambar']['name'];
+        $tmpName = $_FILES['gambar']['tmp_name'];
+        
+        // simpan file ke folder image/
+        $targetDir = "image/";
+        $targetFile = $targetDir . basename($gambar);
+        move_uploaded_file($tmpName, $targetFile);
+    }
+
     $query = "INSERT INTO siswa VALUES ('', '$nama', '$nis', '$email', '$jurusan', '$gambar')";
     mysqli_query($conn, $query);
 

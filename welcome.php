@@ -10,7 +10,6 @@ if (!isset($_SESSION['user'])) {
 $username = $_SESSION['user'];
 $page = $_GET['page'] ?? 'home';
 
-
 ?>
 
 <?php
@@ -22,12 +21,12 @@ if (isset($_POST["submit"])) {
     if (tambah($_POST) > 0) {
         echo "<script>
             alert('Data berhasil ditambahkan!');
-            document.location.href = 'welcome.php';
+            document.location.href = 'welcome.php?page=laporan';
         </script>";
     } else {
         echo "<script>
             alert('Data gagal ditambahkan!');
-            document.location.href = 'welcome.php';
+            document.location.href = 'welcome.php?page=laporan';
         </script>";
     }
 }
