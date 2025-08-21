@@ -131,7 +131,7 @@ if (isset($_POST["submit"])) {
                                     <td><?= htmlspecialchars($row['nis']); ?></td>
                                     <td><?= htmlspecialchars($row['email']); ?></td>
                                     <td><?= htmlspecialchars($row['jurusan']); ?></td>
-                                    <td><img src="image/<?= htmlspecialchars($row['gambar']); ?>" class="thumb"></td>
+                                    <td><img src="image/cache/<?= htmlspecialchars($row['gambar']); ?>" class="thumb"></td>
                                     <td class="aksi-btns">
                                         <a href="view.php?id=<?= $s['id']; ?>" class="view">Lihat</a>
                                         <a href="edit.php?id=<?= $s['id']; ?>" class="edit">Ubah</a>

@@ -39,7 +39,7 @@ function tambah($data)
         $tmpName = $_FILES['gambar']['tmp_name'];
         
         // simpan file ke folder image/
-        $targetDir = "image/";
+        $targetDir = "image/cache/";
         $targetFile = $targetDir . basename($gambar);
         move_uploaded_file($tmpName, $targetFile);
     }
