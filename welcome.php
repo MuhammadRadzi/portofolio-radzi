@@ -37,7 +37,7 @@ if (isset($_POST["submit"])) {
 
 <head>
     <title>welcome</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="welcomestyle.css">
 </head>
 
 <body>
@@ -64,7 +64,36 @@ if (isset($_POST["submit"])) {
                 echo "<h3>Halaman ini menampilkan seluruh nilai yang telah diperoleh dari berbagai mata pelajaran atau modul pembelajaran. Data yang disajikan biasanya berupa tabel dengan kolom mata pelajaran, nilai tugas, nilai ujian, rata-rata, dan keterangan kelulusan. Kamu dapat menggunakan halaman ini untuk memantau perkembangan akademik dari waktu ke waktu, melihat peningkatan atau penurunan nilai, dan mengidentifikasi mata pelajaran yang memerlukan perhatian lebih. Beberapa sistem juga memungkinkan pengguna untuk mengunduh atau mencetak laporan nilai langsung dari halaman ini.</h3>";
                 break;
             case 'kehadiran':
-                echo "<h3>Halaman kehadiran menyajikan catatan lengkap mengenai absensi selama periode tertentu. Informasi yang ditampilkan mencakup jumlah kehadiran, izin, sakit, dan alfa (tidak hadir tanpa keterangan). Rekap kehadiran biasanya dilengkapi dengan persentase, sehingga memudahkan untuk mengevaluasi kedisiplinan. Fitur tambahan yang umum ditemui adalah filter berdasarkan bulan atau semester, serta grafik visual untuk memberikan gambaran yang lebih jelas mengenai pola kehadiran. Halaman ini bermanfaat untuk memastikan catatan absensi tetap terpantau dengan baik.</h3>";
+        ?>
+                <table border="1" cellpadding="10" cellspacing="0">
+                    <thead>
+
+                        <tr>
+                            <th>No.</th>
+                            <th>Nama</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (empty($siswa)): ?>
+                            <tr>
+                                <td colspan="7" style="text-align:center; padding:30px;">Data kosong.</td>
+                            </tr>
+                        <?php else: ?>
+                            <?php
+                            $i = 1;
+                            $siswa = isset($siswa) ? $siswa : [];
+                            foreach ($siswa as $row) : ?>
+                                <tr>
+                                    <td><?= $i; ?></td>
+                                    <td><?= htmlspecialchars($row['nama']); ?></td>
+
+                                </tr>
+                                <?php $i++; ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            <?php
                 break;
             case 'jadwal':
                 echo "<h3>Halaman ini berfungsi sebagai panduan kegiatan harian. Di dalamnya terdapat daftar lengkap mata pelajaran, jam pelajaran, nama pengajar, dan ruangan tempat kegiatan berlangsung. Jadwal biasanya tersusun rapi berdasarkan urutan hari dan jam, sehingga pengguna dapat dengan mudah mengetahui kegiatan yang akan diikuti. Pada beberapa sistem, halaman ini juga dilengkapi dengan fitur pengingat otomatis atau notifikasi jika jadwal mengalami perubahan mendadak. Dengan adanya halaman jadwal, risiko terlambat atau salah masuk kelas dapat diminimalkan.</h3>";
@@ -73,7 +102,7 @@ if (isset($_POST["submit"])) {
                 echo "<h3>Halaman pengaturan adalah pusat kontrol untuk memodifikasi berbagai preferensi akun. Pengguna dapat mengubah data profil seperti nama, alamat email, dan foto profil, mengganti kata sandi, mengatur keamanan akun, serta menyesuaikan tampilan dashboard sesuai keinginan. Beberapa sistem juga menyediakan opsi untuk mengaktifkan atau menonaktifkan notifikasi, mengubah bahasa, dan memilih tema warna. Halaman ini memungkinkan pengguna memiliki kendali penuh atas pengalaman penggunaan dashboard mereka.</h3>";
                 break;
             case 'laporan':
-        ?>
+            ?>
                 <h3>Laporan Siswa</h3>
                 <div class="form-container">
                     <h4>Tambah Siswa Baru</h4>
@@ -91,7 +120,15 @@ if (isset($_POST["submit"])) {
                         <select name="jurusan" id="jurusan">
                             <option value=""></option>
                             <option value="Teknik Informatika">Teknik Informatika</option>
-                            <option value="Sistem Informatika">Sistem Informatika</option>
+                            <option value="Sistem Informatika">Sistem Informasi</option>
+                            <option value="Sistem Informatika">Informatika</option>
+                            <option value="Sistem Informatika">Teknologi Informasi</option>
+                            <option value="Sistem Informatika">Software Engineering</option>
+                            <option value="Sistem Informatika">Teknik Komputer</option>
+                            <option value="Sistem Informatika">Data Science</option>
+                            <option value="Sistem Informatika">E-Commerce</option>
+                            <option value="Sistem Informatika">Desain Komunikasi Visual</option>
+                            <option value="Sistem Informatika">Game Development</option>
                         </select>
 
                         <label for="gambar">Gambar Profil:</label>
@@ -102,7 +139,7 @@ if (isset($_POST["submit"])) {
                 </div>
 
                 <h4>Daftar Siswa</h4>
-                <table border="1" cellpadding="10" cellspacing="0">
+                <table border="1" cellpadding="10" cellspacing="0" width="100%">
                     <thead>
 
                         <tr>
@@ -133,9 +170,9 @@ if (isset($_POST["submit"])) {
                                     <td><?= htmlspecialchars($row['jurusan']); ?></td>
                                     <td><img src="image/cache/<?= htmlspecialchars($row['gambar']); ?>" class="thumb"></td>
                                     <td class="aksi-btns">
-                                        <a href="view.php?id=<?= $s['id']; ?>" class="view">Lihat</a>
-                                        <a href="edit.php?id=<?= $s['id']; ?>" class="edit">Ubah</a>
-                                        <a href="delete.php?id=<?= $s['id']; ?>" class="delete" onclick="return confirm('Hapus data <?= addslashes($s['nama']) ?>?')">Hapus</a>
+                                        <a href="view.php?id=<?= $row['id']; ?>" class="view">Lihat</a>
+                                        <a href="edit.php?id=<?= $row['id']; ?>" class="edit">Ubah</a>
+                                        <a href="hapus.php?id=<?= $row['id']; ?>" class="delete" onclick="return confirm('Yakin ingin menghapus data <?= addslashes($row['nama']); ?>?');">Hapus</a>
                                     </td>
                                 </tr>
                                 <?php $i++; ?>

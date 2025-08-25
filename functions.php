@@ -49,3 +49,22 @@ function tambah($data)
 
     return mysqli_affected_rows($conn);
 }
+
+function hapus($id)
+{
+    global $conn;
+
+    $result = mysqli_query($conn, "SELECT gambar FROM siswa WHERE id = $id");
+    $row = mysqli_fetch_assoc($result);
+
+    // kalau bukan default.jpg, hapus file dari folder
+    if ($row['gambar'] !== 'default.jpg') {
+        $filePath = "image/cache/" . $row['gambar'];
+        if (file_exists($filePath)) {
+            unlink($filePath); // hapus file
+        }
+    }
+
+    mysqli_query($conn, "DELETE FROM siswa WHERE id = $id");
+    return mysqli_affected_rows($conn);
+}
