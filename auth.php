@@ -1,25 +1,24 @@
 <?php
 session_start();
 
-// Dummy user data for authentication
-// In a real application, you would fetch this from a database
+// username dan password dummy
 $dummy_users = [
 	'guru' => 'guru',
 	'siswa' => 'siswa',
 	'admin' => 'admin'
 ];
 
-// Check if the form is submitted
+// cek apakah form login telah disubmit
 $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
 
-// Check if the username and password match any dummy user
+// cek jika username dan password cocok
 if (isset($dummy_users[$username]) && $dummy_users[$username] === $password) {
-	// Set session variable for the user
+	// simpan data user ke session
 	$_SESSION['user'] = $username;
 	header("Location: welcome.php");
 } else {
-	// Redirect to login page with error
+	// jika login gagal, redirect kembali ke halaman login dengan pesan error
 	header("Location: login.php?error=1");
 	exit;
 };

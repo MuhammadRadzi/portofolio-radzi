@@ -7,23 +7,29 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
+// Ambil data user
 $username = $_SESSION['user'];
+// Mengatur halaman yang akan ditampilkan
 $page = $_GET['page'] ?? 'home';
 
 ?>
 
 <?php
+// koneksi ke database
 require 'functions.php';
+// ambil data siswa
 $siswa = mysqli_query($conn, "SELECT * FROM siswa");
 
-
+// cek apakah data submit berhasil ditambahkan atau tidak
 if (isset($_POST["submit"])) {
     if (tambah($_POST) > 0) {
+        // jika data berhasil ditambahkan
         echo "<script>
             alert('Data berhasil ditambahkan!');
             document.location.href = 'welcome.php?page=laporan';
         </script>";
     } else {
+        // jika data gagal ditambahkan
         echo "<script>
             alert('Data gagal ditambahkan!');
             document.location.href = 'welcome.php?page=laporan';
@@ -54,7 +60,9 @@ if (isset($_POST["submit"])) {
 
 
     <div class="content">
-        <h2>Selamat datang, <?php echo htmlspecialchars($username); ?>!</h2>
+        <h2>Selamat datang, <?php
+                            // menampilkan username dari session
+                            echo htmlspecialchars($username); ?>!</h2>
         <?php
         switch ($page) {
             case 'home':
@@ -74,11 +82,15 @@ if (isset($_POST["submit"])) {
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if (empty($siswa)): ?>
+                        <?php
+                        // jika data kosong, tampilkan pesan
+                        if (empty($siswa)): ?>
                             <tr>
                                 <td colspan="7" style="text-align:center; padding:30px;">Data kosong.</td>
                             </tr>
-                        <?php else: ?>
+                        <?php
+                        // jika data tidak kosong, tampilkan data
+                        else: ?>
                             <?php
                             $i = 1;
                             $siswa = isset($siswa) ? $siswa : [];
@@ -153,12 +165,15 @@ if (isset($_POST["submit"])) {
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if (empty($siswa)): ?>
+                        <?php
+                        // jika data kosong, tampilkan pesan
+                        if (empty($siswa)): ?>
                             <tr>
                                 <td colspan="7" style="text-align:center; padding:30px;">Data kosong.</td>
                             </tr>
                         <?php else: ?>
                             <?php
+                            // menampilkan data
                             $i = 1;
                             $siswa = isset($siswa) ? $siswa : [];
                             foreach ($siswa as $row) : ?>
