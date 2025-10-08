@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tipe Data Object</title>
+</head>
+
+<body>
+	<script>
+		const orang = {
+			nama : "Muhammad Radzi Saleh",
+			alamat : "Jl. Goa Ria, Puri Taman Rahmala, Blok C.14",
+			umur : 16
+		};
+
+		// Menambahkan atau mengubah properti
+		// orang["nama"] = "Muhammad Radzi Saleh";
+		// orang["alamat"] = "Jl. Goa Ria, Puri Taman Rahmala, Blok C.14";
+		// orang["umur"] = 16;
+
+		// Mengakses properti
+
+		console.info(`Nama : ${orang.nama}`);
+		console.info(`Alamat : ${orang.alamat}`);
+		console.info(`Umur : ${orang.umur} tahun`);
+		
+		console.table(orang);
+
+		// Menghapus properti
+		delete orang["umur"]
+
+		console.table(orang);
+
+		
+	</script>
+</body>
+
+</html>

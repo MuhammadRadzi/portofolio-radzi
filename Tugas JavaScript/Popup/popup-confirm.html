@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Popup Confirm</title>
+</head>
+
+<body>
+	<script>
+		const masuk = confirm("Anda yakin mau masuk?");
+		if (masuk) {
+			const yakininginmasuk = confirm("Anda yakin banget mau masuk?");
+			if (yakininginmasuk) {
+				const nilai = prompt("Berapa nilai Anda?");
+				const nama = prompt("Siapa nama Anda?");
+				if (nilai >= 91 && nilai <= 100) {
+					alert(`Hello ${nama}, nilai anda sangat kompeten`);
+				} else if (nilai >= 81 && nilai <= 90) {
+					alert(`Hello ${nama}, nilai anda kompeten`);
+				} else if (nilai >= 61 && nilai <= 80) {
+					alert(`Hello ${nama}, nilai anda cukup kompeten`);
+				} else if (nilai >= 0 && nilai <= 60) {
+					alert(`Hello ${nama}, nilai anda kurang kompeten`);
+				} else {
+					alert(`Nilai tidak valid!`);
+				}
+			} else {
+				alert("Bye Bye!");
+			}
+		} else {
+			alert("Bye Bye!");
+		}
+	</script>
+</body>
+
+</html>

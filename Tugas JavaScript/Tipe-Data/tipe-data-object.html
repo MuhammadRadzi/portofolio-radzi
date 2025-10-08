@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tipe Data Object</title>
+</head>
+
+<body>
+	<script>
+		const orang = {
+			"nama lengkap": "Muhammad Radzi Saleh",
+			alamat: "Jl. Goa Ria, Puri Taman Rahmala, Blok C.14",
+			umur: 16,
+		};
+
+		console.info(`Nama : ${orang["nama lengkap"]}`);
+		console.info(`Alamat : ${orang.alamat}`);
+		console.info(`Umur : ${orang.umur} tahun`);
+
+		console.table(orang);
+		delete orang["umur"];
+		console.table(orang);
+
+	</script>
+
+	<script>
+
+		console.info("Ini adalah pesan informasi");
+
+		console.warn("Ini adalah pesan peringatan");
+
+		console.error("Ini adalah pesan error");
+
+		console.debug("Ini adalah pesan debug");
+
+	</script>
+</body>
+
+</html>
