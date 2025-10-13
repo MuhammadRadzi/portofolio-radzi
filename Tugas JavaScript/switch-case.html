@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Switch Case</title>
+</head>
+
+<body>
+	<script>
+		const nilai = "E";
+
+		// perbedaan switch case dan if else
+		// switch-case digunakan ketika satu variabel perlu dibandingkan dengan beberapa nilai konstan, sehingga lebih efisien dan mudah dibaca jika hanya melibatkan banyak pilihan tetap.
+		switch (nilai) {
+			case "A":
+				document.write("<p>Wow Anda Lulus dengan Baik</p>");
+				break;
+			case "B":
+			case "C":
+				document.write("<p>Anda lulus</p>");
+				break;
+			case "D":
+				document.write("<p>Anda tidak lulus</p>");
+				break;
+			default:
+				document.write("<p>Mungkin anda salah jurusan</p>");
+		}
+
+		// If-else digunakan untuk mengevaluasi berbagai kondisi logika yang kompleks, seperti perbandingan nilai atau ekspresi boolean, sehingga lebih fleksibel untuk berbagai situasi.
+		if (nilai === "A") {
+			document.write("<p>Wow Anda Lulus dengan Baik</p>");
+		} else if (nilai === "B" || nilai === "C") {
+			document.write("<p>Anda Lulus</p>");
+		} else if (nilai === "D") {
+			document.write("<p>Anda tidak lulus</p>");
+		} else {
+			document.write("<p>Mungkin anda salah jurusan</p>");
+		}
+	</script>
+</body>
+
+</html>
