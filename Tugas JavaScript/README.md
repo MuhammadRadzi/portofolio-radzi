@@ -1,4 +1,9 @@
 <h1 style="text-align: center;">JAVASCRIPT</h1>
+<h2 style="text-align: center;">Basic Hello World</h2>
+<p><strong>“Hello World”</strong> adalah program paling sederhana yang digunakan untuk mengetes apakah sebuah bahasa pemrograman berjalan dengan benar. Biasanya hanya menampilkan teks Hello World di layar.</p>
+<img width="291" height="56" alt="image" src="https://github.com/user-attachments/assets/994141c5-8765-47c7-8833-6f3cf9fcd6ef" />
+
+
 <h2 style="text-align: center;">Aritmatika</h2>
 <p><strong>Augmented Assignment</strong>, Operator gabungan antara penugasan dan aritmatika, contohnya: x += 2 (sama dengan x = x + 2). Fungsinya mempersingkat penulisan kode saat memperbarui nilai variabel.</p>
 <p>Seperti kamu bilang ke teman, “Tambahkan 5 lagi ke nilai yang sudah ada.” tidak menghitung ulang dari awal, cuma menambah dari nilai yang sebelumnya.</p>
