@@ -73,25 +73,33 @@
 <p>Seperti kotak penyimpanan dengan label. Kamu bisa isi, ubah, atau ganti isinya kapan pun.</p>
 <img width="367" height="403" alt="image" src="https://github.com/user-attachments/assets/02111e06-7e26-436a-bf7d-85381c9ba2fd" />
 
-
-
-<h1 style="text-align: center;">IF STATEMENT</h1>
+<h2 style="text-align: center;">If Statement</h2>
 <p>if statement adalah struktur kontrol dalam pemrograman yang memungkinkan eksekusi blok kode tertentu berdasarkan kondisi yang diberikan. fungsinya untuk membuat keputusan dalam program, sehingga hanya kode yang memenuhi kondisi tertentu yang akan dijalankan.</p>
 <p>Seperti kamu menilai hasil ujian — “Kalau nilainya di atas 70, berarti lulus.” Program hanya menjalankan perintah jika syaratnya terpenuhi.</p>
 <img width="410" height="307" alt="image" src="https://github.com/user-attachments/assets/0c4139ce-a12f-44a0-b639-6da2ffacd2db" />
 
-<h1 style="text-align: center;">MASAK TELUR (ALERT)</h1>
+<h2 style="text-align: center;">Popup Alert</h2>
 <p>popup alert adalah kotak dialog yang muncul di layar untuk memberikan informasi atau peringatan kepada pengguna. fungsinya untuk menyampaikan pesan penting atau instruksi yang perlu diperhatikan oleh pengguna sebelum melanjutkan interaksi dengan aplikasi atau situs web.</p>
 <p>Seperti guru mengumumkan sesuatu lewat pengeras suara: “Anak-anak, besok libur!” Kamu cuma bisa mendengarkan pengumumannya, tidak bisa menjawab.</p>
 <img width="717" height="531" alt="image" src="https://github.com/user-attachments/assets/36dcffc3-6d2f-4d85-8471-f4d66b4f4f88" />
 
-<h1 style="text-align: center;">NILAI (POPUP CONFIRM)</h1>
+<h2 style="text-align: center;">Popup Confirm</h2>
 <p>popup confirm adalah kotak dialog yang muncul di layar untuk meminta konfirmasi atau persetujuan dari pengguna sebelum melanjutkan suatu tindakan. fungsinya untuk memastikan bahwa pengguna benar-benar ingin melakukan tindakan tertentu, sehingga dapat menghindari kesalahan atau tindakan yang tidak diinginkan.</p>
 <p>Seperti temanmu bertanya sebelum bertindak: “Yakin mau hapus file ini?” Kamu bisa jawab ya (OK) atau tidak (Cancel). Program akan bertindak sesuai jawabanmu.</p>
 <img width="632" height="508" alt="image" src="https://github.com/user-attachments/assets/da19197c-2cae-4f29-90e2-125f9b059867" />
 
-<h1 style="text-align: center;">SWITCH CASE</h1>
+<h2 style="text-align: center;">Switch Case</h2>
 <p>switch case adalah struktur kontrol dalam pemrograman yang memungkinkan eksekusi blok kode tertentu berdasarkan nilai dari sebuah variabel atau ekspresi. fungsinya untuk menyederhanakan pengambilan keputusan yang melibatkan banyak kondisi, sehingga kode menjadi lebih mudah dibaca dan dipelihara dibandingkan dengan menggunakan banyak pernyataan if-else.</p>
 <p>Bayangkan kamu punya panel tombol lift dengan banyak tombol lantai: Tekan “1” → pergi ke lantai 1, Tekan “2” → ke lantai 2, Tekan lainnya → ke lantai default (misalnya lobi), Program akan memeriksa tombol mana yang ditekan, lalu menjalankan aksi yang sesuai.</p>
 <p>bedanya dengan if else adalah switch case lebih efisien dan lebih mudah dibaca ketika ada banyak kondisi yang harus diperiksa berdasarkan nilai yang sama, sedangkan if else lebih fleksibel untuk kondisi yang lebih kompleks atau tidak berbasis nilai tunggal.</p>
 <img width="570" height="569" alt="image" src="https://github.com/user-attachments/assets/1c0249dc-df13-4e7f-9b2b-6e8364d9c7d2" />
+
+<h2 style="text-align: center;">Nullish Coalesing (??)</h2>
+<p>Operator ?? digunakan untuk memberikan nilai cadangan (default) jika nilai sebelumnya null atau undefined.</p>
+<p>Seperti lagi nulis formulir: Kolom “Nama” boleh dikosongkan. Kalau kosong, sistem otomatis isi dengan “User Tidak Dikenal”. Artinya, kalau data tidak ada (null), maka gunakan nilai pengganti.</p>
+<img width="396" height="334" alt="image" src="https://github.com/user-attachments/assets/ce6452e6-2890-4d9e-8044-cd14a98e07d9" />
+
+<h2 style="text-align: center;">Optional Chaining (?.)</h2>
+<p>Operator ?. digunakan untuk mengakses properti dari object yang bisa jadi tidak ada, tanpa membuat error.</p>
+<p>Misal, kalau properti ini ada, ambil isinya. Kalau nggak ada, jangan error — cukup bilang undefined.</p>
+<img width="609" height="408" alt="image" src="https://github.com/user-attachments/assets/5b516224-3342-4929-9997-5b137bc7cbe9" />
