@@ -12,6 +12,7 @@
 		const nilai = 90;
 		let ucapan;
 
+		// tanpa operator ternary
 		if (nilai >= 75) {
 			ucapan = "Selamat Anda Lulus!";
 		} else {
@@ -20,6 +21,7 @@
 
 		document.writeln(`<p>${ucapan}</p>`);
 
+		// dengan operator ternary
 		ucapan = nilai >= 75 ? "Selamat Anda Lulus!" : "Silahkan Coba Lagi";
 
 		document.writeln(`<p>${ucapan}</p>`);
