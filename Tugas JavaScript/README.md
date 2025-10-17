@@ -103,3 +103,13 @@
 <p>Operator ?. digunakan untuk mengakses properti dari object yang bisa jadi tidak ada, tanpa membuat error.</p>
 <p>Misal, kalau properti ini ada, ambil isinya. Kalau nggak ada, jangan error — cukup bilang undefined.</p>
 <img width="609" height="408" alt="image" src="https://github.com/user-attachments/assets/5b516224-3342-4929-9997-5b137bc7cbe9" />
+
+<h2 style="text-align: center;">Truthy Falsy</h2>
+<p>Di JavaScript, semua nilai bisa dikonversi menjadi boolean saat digunakan di kondisi (if, while, dll). Falsy → dianggap false, Truthy → dianggap true</p>
+<p>Nilai Falsy (dianggap false): false, 0, "" (string kosong), null, undefined, NaN</p>
+<p>Nilai Truthy (dianggap true). Semua nilai lain yang bukan falsy, Contoh: "Hello", 123, [], {}</p>
+<img width="341" height="198" alt="image" src="https://github.com/user-attachments/assets/7fcdd0e2-9da2-4246-acf8-19ae7a6fb850" />
+
+<h2 style="text-align: center;">Operator Logika di Non Boolean</h2>
+<p>Operator logika seperti && (AND), || (OR), dan ! (NOT) tidak selalu mengembalikan boolean. Mereka mengembalikan nilai asli dari operand, tergantung kondisi truthy/falsy.</p>
+<img width="490" height="517" alt="image" src="https://github.com/user-attachments/assets/04889732-dd5d-47ee-bc49-4c35756c53ad" />
