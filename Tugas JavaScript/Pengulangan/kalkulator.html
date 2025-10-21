@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kalkulator</title>
+</head>
+
+<body>
+	<script>
+		let pilihan;
+
+		do {
+			pilihan = prompt(
+				"Kalkulator\n" +
+				"1. Penjumlahan\n" +
+				"2. Pengurangan\n" +
+				"3. Perkalian\n" +
+				"4. Pembagian\n" +
+				"5. Faktorial\n" +
+				"6. Keluar\n\n" +
+				"Masukkan pilihan (1-6):"
+			);
+
+			while (isNaN(pilihan) || pilihan < 1 || pilihan > 6) {
+				pilihan = prompt("Pilihan tidak valid! Masukkan angka antara 1 sampai 6:");
+			}
+
+			pilihan = Number(pilihan);
+
+			switch (pilihan) {
+				case 1: { // Penjumlahan
+					let a = Number(prompt("Masukkan angka pertama:"));
+					let b = Number(prompt("Masukkan angka kedua:"));
+					alert(`Hasil: ${a} + ${b} = ${a + b}`);
+					break;
+				}
+
+				case 2: { // Pengurangan
+					let a = Number(prompt("Masukkan angka pertama:"));
+					let b = Number(prompt("Masukkan angka kedua:"));
+					alert(`Hasil: ${a} - ${b} = ${a - b}`);
+					break;
+				}
+
+				case 3: { // Perkalian
+					let a = Number(prompt("Masukkan angka pertama:"));
+					let b = Number(prompt("Masukkan angka kedua:"));
+					alert(`Hasil: ${a} × ${b} = ${a * b}`);
+					break;
+				}
+
+				case 4: { // Pembagian
+					let a = Number(prompt("Masukkan angka pertama:"));
+					let b = Number(prompt("Masukkan angka kedua (tidak boleh nol):"));
+					while (b === 0 || isNaN(b)) {
+						b = Number(prompt("Pembagi tidak boleh nol! Masukkan ulang angka kedua:"));
+					}
+					alert(`Hasil: ${a} ÷ ${b} = ${a / b}`);
+					break;
+				}
+
+				case 5: { // Faktorial
+					let n = Number(prompt("Masukkan angka bulat non-negatif:"));
+					while (isNaN(n) || n < 0 || !Number.isInteger(n)) {
+						n = Number(prompt("Input tidak valid! Masukkan angka bulat non-negatif:"));
+					}
+
+					let hasil = 1;
+					for (let i = 1; i <= n; i++) {
+						hasil *= i;
+					}
+
+					alert(`Hasil: ${n}! = ${hasil}`);
+					break;
+				}
+
+				case 6:
+					alert(`Keluar`);
+					break;
+			}
+
+		} while (pilihan !== 6);
+
+	</script>
+</body>
+
+</html>
