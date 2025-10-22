@@ -25,6 +25,17 @@
 <img width="407" height="268" alt="image" src="https://github.com/user-attachments/assets/61d4714b-e7c7-479f-ab26-70ec1b704291" />
 
 
+<h2 style="text-align: center;">Pengulangan</h2>
+<p><strong>For Loop</strong>, for digunakan kalau kamu tahu berapa kali perulangan akan dilakukan. Strukturnya terdiri dari tiga bagian: initialization, condition, dan increment/decrement. Loop ini akan berjalan selama kondisi bernilai true, dan menghentikan saat false.</p>
+<img width="532" height="230" alt="image" src="https://github.com/user-attachments/assets/376d319d-ff8d-42d0-b00d-f7437acd583e" />
+
+<p><strong>While Loop</strong>, while digunakan kalau kamu belum tahu pasti berapa kali perulangan, tapi tahu kapan harus berhenti. Loop berjalan selama kondisi bernilai true.</p>
+<img width="542" height="144" alt="image" src="https://github.com/user-attachments/assets/242add6b-e89e-4a6b-bb9f-ef427c6ae226" />
+
+<p><strong>Do While Loop</strong>, do…while mirip dengan while, tapi menjalankan perulangan minimal sekali, meskipun kondisi awalnya salah. Karena pengecekan kondisi dilakukan setelah kode dijalankan.</p>
+<img width="517" height="114" alt="image" src="https://github.com/user-attachments/assets/add4b458-329d-4a03-a5b3-ff9415786748" />
+
+
 <h2 style="text-align: center;">Perbandingan</h2>
 <p><strong>Operator Logika</strong>, Digunakan untuk operasi logika boolean: && (dan), || (atau), ! (tidak). Fungsinya menggabungkan beberapa kondisi dan menghasilkan nilai true atau false.</p>
 <p>Misalnya kamu hanya bisa keluar rumah kalau tidak hujan DAN tugas sudah selesai.</p>
