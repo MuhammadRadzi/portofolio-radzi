@@ -33,7 +33,7 @@
 <img width="542" height="144" alt="image" src="https://github.com/user-attachments/assets/242add6b-e89e-4a6b-bb9f-ef427c6ae226" />
 
 <p><strong>Do While Loop</strong>, do…while mirip dengan while, tapi menjalankan perulangan minimal sekali, meskipun kondisi awalnya salah. Karena pengecekan kondisi dilakukan setelah kode dijalankan.</p>
-<img width="517" height="114" alt="image" src="https://github.com/user-attachments/assets/add4b458-329d-4a03-a5b3-ff9415786748" />
+<img width="524" height="158" alt="image" src="https://github.com/user-attachments/assets/3abe4f27-0ab9-46f3-bea0-c683d4c22e13" />
 
 
 <h2 style="text-align: center;">Perbandingan</h2>
