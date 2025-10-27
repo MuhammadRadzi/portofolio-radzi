@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz Rumus Bentuk</title>
+</head>
+
+<body>
+	<script>
+		const nilai1 = Number(prompt("Masukkan nilai pertama:"));
+		const nilai2 = Number(prompt("Masukkan nilai kedua:"));
+
+		const bentuk = prompt(
+			"Pilih luas bentuk yang ingin dihitung:\n" +
+			"1. Luas Persegi\n" +
+			"2. Luas Segitiga\n\n" +
+			"Masukkan pilihan (1-2):"
+		);
+		
+		if (bentuk == 1) {
+			const luaspersegi = nilai1 * nilai2;
+			alert(`Luas persegi = ${luaspersegi}`)
+		} else if (bentuk == 2) {
+			const luassegitiga = 0.5 * nilai1 * nilai2;
+			alert(`Luas segitiga = ${luassegitiga}`)
+		} else {
+			alert(`Pilihan tidak valid!`)
+		};
+		
+		location.reload()
+		
+	</script>
+</body>
+
+</html>
