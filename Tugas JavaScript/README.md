@@ -35,6 +35,10 @@
 <p><strong>Do While Loop</strong>, do…while mirip dengan while, tapi menjalankan perulangan minimal sekali, meskipun kondisi awalnya salah. Karena pengecekan kondisi dilakukan setelah kode dijalankan.</p>
 <img width="524" height="158" alt="image" src="https://github.com/user-attachments/assets/3abe4f27-0ab9-46f3-bea0-c683d4c22e13" />
 
+<p><strong>For...Of Loop</strong>, for...of digunakan untuk mengiterasi nilai dari iterable seperti array, string, atau objek yang dapat diiterasi lainnya. Setiap iterasi memberikan nilai dari elemen dalam iterable tersebut.</p>
+
+<p><strong>Break dan Continue</strong>, break digunakan untuk menghentikan perulangan sepenuhnya, sedangkan continue melewati iterasi saat ini dan melanjutkan ke iterasi berikutnya.</p>
+
 
 <h2 style="text-align: center;">Perbandingan</h2>
 <p><strong>Operator Logika</strong>, Digunakan untuk operasi logika boolean: && (dan), || (atau), ! (tidak). Fungsinya menggabungkan beberapa kondisi dan menghasilkan nilai true atau false.</p>
@@ -84,6 +88,60 @@
 <p>Seperti kotak penyimpanan dengan label. Kamu bisa isi, ubah, atau ganti isinya kapan pun.</p>
 <img width="367" height="403" alt="image" src="https://github.com/user-attachments/assets/02111e06-7e26-436a-bf7d-85381c9ba2fd" />
 
+<h2 style="text-align: center;">Function</h2>
+<p><strong>Function</strong>, Blok kode yang dirancang untuk melakukan tugas tertentu. Fungsinya untuk mengorganisir kode menjadi bagian-bagian yang dapat digunakan kembali, sehingga memudahkan pemeliharaan dan pengelolaan program.</p>
+<p>Seperti resep masakan: kamu mengikuti langkah-langkah tertentu untuk membuat hidangan. Setelah resep dibuat, kamu bisa menggunakannya lagi kapan saja tanpa harus menulis ulang langkah-langkahnya.</p>
+
+<p><strong>Function Parameter</strong>, Parameter adalah variabel yang didefinisikan dalam deklarasi fungsi untuk menerima nilai saat fungsi dipanggil. Fungsinya memungkinkan fungsi untuk menerima input dinamis dan bekerja dengan data yang berbeda setiap kali dipanggil.</p>
+<p>Seperti bahan-bahan dalam resep masakan: kamu bisa mengganti bahan sesuai selera, misalnya menggunakan apel atau pisang dalam resep pai.</p>
+
+<p><strong>Function Return Value</strong>, Return value adalah nilai yang dikembalikan oleh sebuah fungsi setelah selesai dieksekusi. Fungsinya memungkinkan fungsi untuk memberikan hasil atau output yang dapat digunakan di bagian lain dari program.</p>
+<p>Seperti hasil masakan dari resep: setelah mengikuti langkah-langkah, kamu mendapatkan hidangan yang siap disajikan.</p>
+
+<p><strong>Function Optional Parameter</strong>, Optional parameter adalah parameter dalam fungsi yang tidak wajib diisi saat fungsi dipanggil. Fungsinya memberikan fleksibilitas dalam penggunaan fungsi, sehingga pengguna dapat memilih untuk melewatkan beberapa parameter jika tidak diperlukan.</p>
+<p>Seperti kamu memasak dengan resep yang memiliki bahan opsional: misalnya, menambahkan kacang sebagai topping, tapi jika tidak ada, hidangan tetap bisa dibuat tanpa kacang.</p>
+
+<p><strong>Function Default Parameter</strong>, Default parameter adalah nilai awal yang diberikan pada parameter fungsi jika tidak ada nilai yang diberikan saat fungsi dipanggil. Fungsinya memastikan bahwa fungsi tetap dapat berjalan dengan baik meskipun beberapa parameter tidak disediakan oleh pengguna.</p>
+<p>Seperti resep masakan yang menyarankan bahan tertentu sebagai default: misalnya, jika tidak ada gula, kamu bisa menggunakan madu sebagai pengganti.</p>
+
+<p><strong>Function Rest Parameter</strong>, Rest parameter adalah fitur dalam fungsi yang memungkinkan pengumpulan sejumlah argumen menjadi sebuah array. Fungsinya memudahkan penanganan jumlah argumen yang tidak tetap saat memanggil fungsi.</p>
+<p>Seperti kamu membawa beberapa barang belanjaan dalam satu kantong: kamu tidak perlu menentukan berapa banyak barang yang akan dibawa, cukup masukkan semuanya ke dalam kantong tersebut.</p>
+
+<p><strong>Function as Value</strong>, Fungsi sebagai nilai berarti fungsi dapat diperlakukan seperti nilai lainnya, seperti disimpan dalam variabel, dilewatkan sebagai argumen ke fungsi lain, atau dikembalikan dari fungsi. Fungsinya memungkinkan penggunaan fungsi secara fleksibel dan dinamis dalam program.</p>
+<p>Seperti kamu memberikan resep masakan kepada teman: mereka bisa menyimpan resep itu, menggunakannya, atau bahkan mengirimkannya ke orang lain.</p>
+
+<p><strong>Function Anonymous</strong>, Fungsi anonim adalah fungsi yang tidak memiliki nama dan biasanya digunakan sebagai nilai atau argumen dalam fungsi lain. Fungsinya memungkinkan pembuatan fungsi yang singkat dan langsung digunakan tanpa perlu mendefinisikan nama terlebih dahulu.</p>
+<p>Seperti kamu menulis catatan singkat di kertas tanpa memberi judul: catatan itu hanya digunakan sekali dan langsung dibuang setelah dibaca.</p>
+
+<p><strong>Function in Function</strong>, Fungsi dalam fungsi adalah konsep di mana sebuah fungsi didefinisikan di dalam fungsi lain. Fungsinya memungkinkan pembuatan fungsi yang lebih terstruktur dan dapat mengakses variabel dari fungsi induknya.</p>
+<p>Seperti kamu membuat resep masakan yang memiliki langkah-langkah khusus di dalamnya: langkah-langkah tersebut hanya berlaku dalam konteks resep utama.</p>
+
+<p><strong>Function Generator</strong>, Fungsi generator adalah jenis fungsi khusus yang dapat menghentikan eksekusi sementara dan melanjutkannya kembali di titik tertentu menggunakan kata kunci yield. Fungsinya memungkinkan pembuatan iterasi yang lebih efisien dan pengelolaan alur eksekusi yang kompleks. <strong>Lazy Generator</strong>, yaitu generator yang menghasilkan nilai hanya saat diminta, bukan semuanya sekaligus.</p>
+<p>Seperti kamu membaca buku petualangan di mana kamu bisa berhenti di tengah cerita dan melanjutkannya nanti dari titik yang sama.</p>
+
+<p><strong>Function Arrow</strong>, Fungsi panah (arrow function) adalah sintaks singkat untuk mendefinisikan fungsi dalam JavaScript menggunakan tanda panah (=>). Fungsinya memudahkan penulisan fungsi, terutama untuk fungsi sederhana atau fungsi yang digunakan sebagai callback.</p>
+<p>Seperti kamu menulis catatan singkat dengan gaya yang lebih ringkas: “Beli buah” menjadi “Beli buah” tanpa perlu menulis kata-kata tambahan.</p>
+
+<p><strong>Closure</strong>, Closure adalah konsep di mana sebuah fungsi memiliki akses ke variabel dari lingkup luar (enclosing scope) meskipun lingkup tersebut sudah selesai dieksekusi. Fungsinya memungkinkan pembuatan fungsi yang dapat menyimpan state atau data privat.</p>
+<p>Seperti kamu menyimpan rahasia dalam kotak kecil: meskipun kotak itu sudah ditutup, kamu masih bisa membuka dan mengakses rahasia di dalamnya kapan saja.</p>
+
+<h2 style="text-align: center;">Object</h2>
+<p><strong>Object Method</strong>, Method adalah fungsi yang menjadi properti dari sebuah objek. Fungsinya memungkinkan objek untuk memiliki perilaku atau tindakan tertentu yang dapat dijalankan.</p>
+<p>Seperti kamu memiliki remote TV: tombol-tombol pada remote adalah method yang memungkinkan kamu mengontrol TV, seperti menyalakan, mematikan, atau mengganti saluran.</p>
+
+<p><strong>Object Method Arrow</strong>, Method panah (arrow method) adalah fungsi yang didefinisikan sebagai properti objek menggunakan sintaks panah (=>). Fungsinya memudahkan penulisan method dalam objek, terutama untuk method yang tidak memerlukan konteks this yang berbeda.</p>
+<p>Seperti kamu menulis catatan singkat di buku harian: catatan itu adalah method yang terkait dengan buku harian tersebut.</p>
+
+<h2 style="text-align: center;">Scope</h2>
+<p><strong>Global Scope</strong>, Variabel yang didefinisikan di luar fungsi atau blok memiliki cakupan global, artinya dapat diakses dari mana saja dalam kode. Fungsinya memungkinkan data atau fungsi untuk digunakan di seluruh program.</p>
+<p>Seperti papan pengumuman di sekolah: semua orang bisa melihat informasi yang tertera di sana, tidak peduli di mana mereka berada.</p>
+
+<p><strong>Local Scope</strong>, Variabel yang didefinisikan di dalam fungsi atau blok memiliki cakupan lokal, artinya hanya dapat diakses dari dalam fungsi atau blok tersebut. Fungsinya membatasi akses ke data atau fungsi agar tidak dapat diakses dari luar, sehingga menghindari konflik nama dan menjaga keamanan data.</p>
+<p>Seperti loker di sekolah: hanya kamu yang bisa membuka lokermu sendiri, orang lain tidak bisa mengaksesnya.</p>
+
+<p><strong>Nested Function Scope</strong>, Fungsi bersarang (nested function) adalah fungsi yang didefinisikan di dalam fungsi lain. Fungsinya memungkinkan pembuatan fungsi yang lebih terstruktur dan dapat mengakses variabel dari fungsi induknya.</p>
+<p>Seperti kamu membuat resep masakan yang memiliki langkah-langkah khusus di dalamnya: langkah-langkah tersebut hanya berlaku dalam konteks resep utama.</p>
+
 <h2 style="text-align: center;">If Statement</h2>
 <p>if statement adalah struktur kontrol dalam pemrograman yang memungkinkan eksekusi blok kode tertentu berdasarkan kondisi yang diberikan. fungsinya untuk membuat keputusan dalam program, sehingga hanya kode yang memenuhi kondisi tertentu yang akan dijalankan.</p>
 <p>Seperti kamu menilai hasil ujian — “Kalau nilainya di atas 70, berarti lulus.” Program hanya menjalankan perintah jika syaratnya terpenuhi.</p>
@@ -124,3 +182,39 @@
 <h2 style="text-align: center;">Operator Logika di Non Boolean</h2>
 <p>Operator logika seperti && (AND), || (OR), dan ! (NOT) tidak selalu mengembalikan boolean. Mereka mengembalikan nilai asli dari operand, tergantung kondisi truthy/falsy.</p>
 <img width="490" height="517" alt="image" src="https://github.com/user-attachments/assets/04889732-dd5d-47ee-bc49-4c35756c53ad" />
+
+<h2 style="text-align: center;">Ternary Operator</h2>
+<p>Ternary operator adalah cara singkat untuk menulis pernyataan if-else dalam satu baris. Sintaksnya: kondisi ? nilai_jika_true : nilai_jika_false</p>
+<p>Seperti kamu memilih antara dua opsi: “Kalau hujan, bawa payung; kalau tidak, pakai kacamata hitam.”</p>
+
+<h2 style="text-align: center;">Operator Typeof</h2>
+<p>Operator typeof digunakan untuk mengetahui tipe data dari sebuah nilai atau variabel. Fungsinya membantu dalam debugging dan validasi data.</p>
+<p>Seperti kamu menanyakan jenis barang di toko: “Ini barang apa?” Penjual akan menjawab berdasarkan jenisnya (misalnya, baju, sepatu, dll).</p>
+
+<h2 style="text-align: center;">Operator In</h2>
+<p>Operator in digunakan untuk memeriksa apakah sebuah properti ada dalam sebuah objek atau indeks ada dalam sebuah array. Fungsinya untuk validasi keberadaan data sebelum mengaksesnya.</p>
+<p>Seperti kamu mengecek daftar belanjaan: “Apakah ada telur di daftar?” Jika ada, kamu bisa membelinya.</p>
+
+<h2 style="text-align: center;">Label</h2>
+<p>Label adalah identifier yang digunakan untuk menandai sebuah pernyataan dalam kode, sehingga bisa dirujuk oleh pernyataan kontrol seperti break atau continue. Fungsinya untuk mengontrol alur eksekusi dalam nested loops atau switch statements.</p>
+<p>Seperti memberi nama pada sebuah titik di peta: “Kalau sampai di sini, belok kiri.”</p>
+
+<h2 style="text-align: center;">With Statement</h2>
+<p>With statement digunakan untuk memperpendek akses ke properti dari sebuah objek dengan menambahkan konteks objek tersebut. Fungsinya untuk membuat kode lebih ringkas saat bekerja dengan banyak properti dari objek yang sama.</p>
+<p>Seperti kamu sedang berbicara tentang sebuah buku: “Dengan buku ini, aku belajar banyak.” Jadi kamu tidak perlu menyebutkan nama bukunya berulang kali.</p>
+
+<h2 style="text-align: center;">Kata Kunci this</h2>
+<p>Kata kunci this merujuk pada konteks eksekusi saat ini dalam sebuah fungsi atau objek. Fungsinya untuk mengakses properti atau metode dari objek yang sedang aktif.</p>
+<p>Seperti kamu menunjuk diri sendiri saat berbicara: “Saya suka belajar.” Di sini, "saya" merujuk pada dirimu sendiri.</p>
+
+<h2 style="text-align: center;">Getter & Setter</h2>
+<p>Getter dan Setter adalah metode khusus dalam objek yang digunakan untuk mengakses (getter) dan memodifikasi (setter) properti objek. Fungsinya untuk mengontrol akses dan validasi data saat properti diambil atau diubah.</p>
+<p>Seperti kamu punya kotak penyimpanan dengan kunci: Getter adalah cara untuk membuka kotak dan mengambil isinya, sedangkan Setter adalah cara untuk memasukkan barang ke dalam kotak dengan aturan tertentu.</p>
+
+<h2 style="text-align: center;">Masalah Variable var</h2>
+<p>Masalah dengan var adalah cakupannya yang bersifat function-scoped, sehingga dapat menyebabkan konflik nama variabel dan kesulitan dalam pengelolaan kode. Selain itu, var dapat di-hoist, yang berarti deklarasinya dipindahkan ke atas fungsi, sehingga dapat menyebabkan perilaku tak terduga.</p>
+<p>Seperti kamu menaruh barang di meja tanpa label: Bisa jadi ada dua barang dengan nama yang sama, sehingga membingungkan saat ingin mengambilnya.</p>
+
+<h2 style="text-align: center;">Destructuring</h2>
+<p>Destructuring adalah cara singkat untuk mengekstrak nilai dari array atau properti dari objek ke dalam variabel terpisah. Fungsinya memudahkan pengambilan data dari struktur yang kompleks.</p>
+<p>Seperti kamu membuka kotak berisi beberapa barang, lalu mengambil barang-barang tertentu dan menaruhnya di meja terpisah untuk digunakan.</p>

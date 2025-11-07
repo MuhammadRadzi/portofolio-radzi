@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Object Method</title>
+</head>
+
+<body>
+	<script>
+		// const person = {
+		// 	name: "Radzi",
+		// 	sayHello: function (name) {
+		// 		alert(`Hello ${name}`);
+		// 	}
+		// };
+
+		const person = {
+			name: "Eko"
+		};
+
+		person.sayHello = function (name) {
+			alert(`Hello ${name}`);
+		}
+
+		person.sayHello('Radzi')
+
+		// kenapa bukan Eko outputnya? karena parameter functionnya yang dipanggil adalah 'Radzi'
+	</script>
+</body>
+
+</html>
