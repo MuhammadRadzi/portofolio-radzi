@@ -1,4 +1,4 @@
-<img width="528" height="168" alt="image" src="https://github.com/user-attachments/assets/0160ea11-af90-4398-932f-b8746db1c1f5" /><h1 style="text-align: center;">JAVASCRIPT</h1>
+<h1 style="text-align: center;">JAVASCRIPT</h1>
 <h2 style="text-align: center;">Basic Hello World</h2>
 <p><strong>“Hello World”</strong> adalah program paling sederhana yang digunakan untuk mengetes apakah sebuah bahasa pemrograman berjalan dengan benar. Biasanya hanya menampilkan teks Hello World di layar.</p>
 <img width="291" height="56" alt="image" src="https://github.com/user-attachments/assets/994141c5-8765-47c7-8833-6f3cf9fcd6ef" />
