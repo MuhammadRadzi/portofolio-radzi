@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		
+		function createShape(type) {
+			if (type === 'circle') return { draw: () => console.log('draw circle') };
+			if (type === 'square') return { draw: () => console.log('draw square') };
+			// bila banyak tipe: switch -> sebaiknya gunakan map atau class registry
+		}
+
+		const shape = createShape('circle');
+		shape.draw(); // polymorphism: different draw implementations
+
+	</script>
+</body>
+
+</html>

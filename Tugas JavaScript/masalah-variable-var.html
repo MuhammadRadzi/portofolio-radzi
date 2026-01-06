@@ -4,13 +4,20 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Masalah Variable var</title>
 </head>
 
 <body>
-	<h1 id="judul">Hello World</h1>
 	<script>
-		document.getElementById("judul").innerHTML = "Belajar JavaScript!";
+		// Global Scope
+		var i = 20;
+
+		for (var i = 0; i < 10; i++) {
+			// Local Scope
+			console.info(`Local ${i}`);
+		}
+
+		console.info(`Global ${i}`);
 	</script>
 </body>
 

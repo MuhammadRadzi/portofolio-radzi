@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>getter & Setter</title>
+</head>
+
+<body>
+	<script>
+		const person = {
+			firstName: "Radzi",
+			lastName: "Saleh",
+			get fullName() {
+				return `${this.firstName} ${this.lastName}`;
+			},
+			set fullName(value) {
+				const parts = value.split(" ");
+				this.firstName = parts[0];
+				this.lastName = parts[1];
+			},
+		};
+		
+		person .fullName = "Budi Nughara";
+		console.table(person);
+
+		person .fullName = "Joko Morro";
+		console.table(person);
+
+		person .fullName = "Eko Khannedy";
+		console.table(person);
+
+		// Getter berfungsi untuk mengambil nilai 
+		// Setter berfungsi untuk mengubah nilai  
+	</script>
+</body>
+
+</html>

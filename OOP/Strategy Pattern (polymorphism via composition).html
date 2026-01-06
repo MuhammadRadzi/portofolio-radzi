@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		
+		class Printer {
+			constructor(strategy) { // strategy: object yg punya method print()
+				this.strategy = strategy;
+			}
+			print(data) {
+				this.strategy.print(data);
+			}
+		}
+
+		const jsonStrategy = { print: data => console.log(JSON.stringify(data)) };
+		const textStrategy = { print: data => console.log(String(data)) };
+
+		const p = new Printer(jsonStrategy);
+		p.print({ a: 1 }); // prints JSON
+
+		p.strategy = textStrategy;
+		p.print("hello"); // prints text
+
+	</script>
+</body>
+
+</html>
