@@ -33,5 +33,5 @@ Controller adalah penghubung antara Model dan View.
 - Mengirim data ke View
 
 ### Contoh:
--`UserController`
--`LoginController`
+- `UserController`
+- `LoginController`
